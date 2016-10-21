@@ -17,10 +17,10 @@ It is also intended to display how Google API can be integrated within your own 
 ## Installation of Nodejs:
 Follow these three simple commands to install node js and npm:
 
-''' sudo apt-get update
+``` sudo apt-get update
   sudo apt-get install -y nodejs
   sudo apt-get install -y npm
-'''
+```
 
 ## Node.js:
 1. Nodejs can be used to power a lot of asynchronous background processes.
@@ -28,13 +28,13 @@ Follow these three simple commands to install node js and npm:
 3. Nodejs makes it possible to create highly scalable applications.
 4. Nodejs works on event loop which handles the requests asynchronously and returns the results to the registered callback events.
 
-## NPM (Node Package Manager)
+## NPM (Node Package Manager):
 1. NPM is fast, robust, and consistent. It helps specifying and installing project dependencies for nodejs applications.
 2. It also handles global installs of shell commands and platform-dependent binaries.
 3. The libraries that are required for running this sample webapp are included as dependencies within the package.json file.
 4. However, these dependencies can also be downloaded and installed using npm by command:
 
-''' npm i express express-stormpath cookie-parser csurf jade forms xtend body-parser --save '''
+``` npm i express express-stormpath cookie-parser csurf jade forms xtend body-parser --save ```
 
 ## Stormpath:
 1. Stormpath is an API service that allows developers to create, edit, and securely store user accounts and user account data, and connect them with one or multiple applications.
@@ -45,25 +45,25 @@ https://api.stormpath.com/login
 
 ## Usage:
 1. Clone the project following the
-'''git clone https://github.com/varungituser/nodejswebapp.git command: '''
+```git clone https://github.com/varungituser/nodejswebapp.git command: ```
 2. Once the project is cloned, change the directory to the nodejswebapp folder, and if you have not already installed the dependencies using npm, proceed to install them with:
-'''npm install'''
+```npm install```
 This should install all the dependencies from package.json
 3. Once all the dependencies are installed, you should be able to see a folder "node_modules".
 4. You can also list the dependencies by using:
-'''npm list'''
+```npm list```
 5. Once the nodejs app is ready to run, use the following for to export the API keys used for Stormpath:
-'''
+```
 export STORMPATH_CLIENT_APIKEY_ID=5NJLYK87BHJIGIY80ZH2PKJX4
 export STORMPATH_CLIENT_APIKEY_SECRET=pxDdIlVpSEbkhBz39BgFtmjaLlDkrAYcsxkYyYOp420
 export STORMPATH_APPLICATION_HREF=https://api.stormpath.com/v1/applications/5hF5Z7cFHsqLc5tvPXTY7m 
-'''
+```
 6. Now, proceed to run the server.js:
-'''node server.js'''
+```node server.js```
 7. If softlinking is not done, try using:
-'''nodejs server.js'''
+```nodejs server.js```
 8. To softlink use:
-'''sudo ln –s /usr/bin/nodejs /usr/bin/node'''
+```sudo ln –s /usr/bin/nodejs /usr/bin/node```
 9. Once server.js runs, it will display a message as: "Stormpath Ready"
 10. Now, in your browser, browse the URL: localhost:3000
 11. You should be able to see a simple Login Page asking for email and password.
@@ -83,8 +83,21 @@ export STORMPATH_APPLICATION_HREF=https://api.stormpath.com/v1/applications/5hF5
 9. Select "Configure Consent Screen" and simply enter the display Product name for your project.
 10. Now under the Create client ID option, Choose Application type as "Web Application", enter name of the application.
 11. Now, enter the redirect URI's as: http://localhost:3000/callbacks/google
+12. Once done, login to Stormpath Admin Console: https://api.stormpath.com/
+13. Under Directories, choose Create Directory, and choose its type as Google, give it a name.
+14. Enter the Google Client ID, Google Client Secret and Google Authorized Redirect URI that was used to create the client ID on Google API.
+15. This should now embed a Google Login API button into the login screen for the webapp.
+ 
+## Dockerizing the webapp:
+1. Navigate to the cloned nodejswebapp folder.
+2. Use the command to create a docker container from the Dockerfile:
+```docker build -t <your username>/node-web-app .```
+3. Run the webapp by using command:
+```docker run -p 49160:3000 -d <your username>/node-web-app```
+4. curl -i localhost:49160
+5. You can also browse to localhost:49160 on your browser to run the app.
 
-##References:
+## References:
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 https://stormpath.com/blog/build-nodejs-express-stormpath-app
 
