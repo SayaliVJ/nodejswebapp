@@ -17,10 +17,9 @@ It is also intended to display how Google API can be integrated within your own 
 ## Installation of Nodejs:
 Follow these three simple commands to install node js and npm:
 
-``` sudo apt-get update
-  sudo apt-get install -y nodejs
-  sudo apt-get install -y npm
-```
+``` sudo apt-get update```
+```  sudo apt-get install -y nodejs```
+```  sudo apt-get install -y npm```
 
 ## Node.js:
 1. Nodejs can be used to power a lot of asynchronous background processes.
@@ -40,12 +39,11 @@ Follow these three simple commands to install node js and npm:
 1. Stormpath is an API service that allows developers to create, edit, and securely store user accounts and user account data, and connect them with one or multiple applications.
 2. The project example that is provided here will allow Stormpath to be used as an authentication API for the example nodejs webapp.
 3. Currently for demo purpose, the Stormpath api keys being used for this sample web project are the ones which are created for me.
-4. You can choose to create your own Stormpath account to create the API keys. Following is the URL to create the account and start using it:
-https://api.stormpath.com/login
+4. You can choose to create your own Stormpath account to create the API keys. Following is the URL to create the account and start using it: https://api.stormpath.com/login
 
 ## Usage:
-1. Clone the project following the
-```git clone https://github.com/varungituser/nodejswebapp.git command: ```
+1. Clone the project following the command:
+```git clone https://github.com/varungituser/nodejswebapp.git ```
 2. Once the project is cloned, change the directory to the nodejswebapp folder, and if you have not already installed the dependencies using npm, proceed to install them with:
 ```npm install```
 This should install all the dependencies from package.json
@@ -53,11 +51,10 @@ This should install all the dependencies from package.json
 4. You can also list the dependencies by using:
 ```npm list```
 5. Once the nodejs app is ready to run, use the following for to export the API keys used for Stormpath:
-```
-export STORMPATH_CLIENT_APIKEY_ID=5NJLYK87BHJIGIY80ZH2PKJX4
-export STORMPATH_CLIENT_APIKEY_SECRET=pxDdIlVpSEbkhBz39BgFtmjaLlDkrAYcsxkYyYOp420
-export STORMPATH_APPLICATION_HREF=https://api.stormpath.com/v1/applications/5hF5Z7cFHsqLc5tvPXTY7m 
-```
+```export STORMPATH_CLIENT_APIKEY_ID=5NJLYK87BHJIGIY80ZH2PKJX4```
+```export STORMPATH_CLIENT_APIKEY_SECRET=pxDdIlVpSEbkhBz39BgFtmjaLlDkrAYcsxkYyYOp420```
+```export STORMPATH_APPLICATION_HREF=https://api.stormpath.com/v1/applications/5hF5Z7cFHsqLc5tvPXTY7m ```
+
 6. Now, proceed to run the server.js:
 ```node server.js```
 7. If softlinking is not done, try using:
