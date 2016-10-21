@@ -17,9 +17,11 @@ It is also intended to display how Google API can be integrated within your own 
 ## Installation of Nodejs:
 Follow these three simple commands to install node js and npm:
 
-``` sudo apt-get update```
-```  sudo apt-get install -y nodejs```
-```  sudo apt-get install -y npm```
+``` 
+sudo apt-get update
+sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+```
 
 ## Node.js:
 1. Nodejs can be used to power a lot of asynchronous background processes.
@@ -51,9 +53,11 @@ This should install all the dependencies from package.json
 4. You can also list the dependencies by using:
 ```npm list```
 5. Once the nodejs app is ready to run, use the following for to export the API keys used for Stormpath:
-```export STORMPATH_CLIENT_APIKEY_ID=5NJLYK87BHJIGIY80ZH2PKJX4```
-```export STORMPATH_CLIENT_APIKEY_SECRET=pxDdIlVpSEbkhBz39BgFtmjaLlDkrAYcsxkYyYOp420```
-```export STORMPATH_APPLICATION_HREF=https://api.stormpath.com/v1/applications/5hF5Z7cFHsqLc5tvPXTY7m ```
+```
+export STORMPATH_CLIENT_APIKEY_ID=5NJLYK87BHJIGIY80ZH2PKJX4
+export STORMPATH_CLIENT_APIKEY_SECRET=pxDdIlVpSEbkhBz39BgFtmjaLlDkrAYcsxkYyYOp420
+export STORMPATH_APPLICATION_HREF=https://api.stormpath.com/v1/applications/5hF5Z7cFHsqLc5tvPXTY7m
+```
 
 6. Now, proceed to run the server.js:
 ```node server.js```
